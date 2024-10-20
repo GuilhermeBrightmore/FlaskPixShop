@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    
+    <div>
+        <form action="" method="post">
+            <h4>Nome do Produto:</h4><input type="text" name="nomeproduto" id="">
+            <h4>Quantidade:</h4><input type="number" name="quantidadeproduto" id="">
+            <h4>Preço do Produto:</h4><input type="number" step="0.01" min="0" name="precoproduto"/>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="container">
+        {% for item in produtos %}
+            <div class="card">
+                <h3>{{produtos[item]['nome']}}</h3>
+                <h3>R${{produtos[item]['preco']}}</h3>
+                <div class="actions">
+                    <a href="/increment/{{item}}"><input type="button" value="+"></a>
+                    <p>{{produtos[item]['quantidade']}}</p>
+                    <a href="/desincrement/{{item}}"><input type="button" value="-"></a>
+                    <a href="/deletar/{{item}}"><input type="button" value="Apagar"></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

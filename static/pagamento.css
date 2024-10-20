@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #313030; /* Fundo cinza claro */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco para a caixa */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    padding: 20px;
+    width: 300px; /* Largura da caixa */
+    text-align: center; /* Centraliza o conteúdo interno */
+}
+
+h3 {
+    margin-bottom: 15px; /* Espaço entre o título e a imagem */
+    color: #333; /* Cor do texto */
+}
+
+img {
+    max-width: 100%; /* Faz com que a imagem seja responsiva */
+    height: auto;
+    border: 3px solid #838383;
+    border-radius: 10px; /* Bordas levemente arredondadas na imagem */
+    margin-bottom: 15px; /* Espaço entre a imagem e o botão */
+}
+
+button {
+    background-color: #28a745; /* Cor verde para o botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para a cor */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+}

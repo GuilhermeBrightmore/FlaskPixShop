@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='loja_style.css')}}">
+</head>
+<body>
+    <button>Saldo: 50.00</button> 
+    <form action="" method="post">
+        {% for item in produtos %}
+            {% if produtos[item]['quantidade'] == 0 %}
+                <!-- Item fora de estoque -->
+            {% else %}
+                <div>
+                    <h3>{{produtos[item]['nome']}} - R${{produtos[item]['preco']}}</h3>
+                    <p>Estoque: {{produtos[item]['quantidade']}}</p>
+                    <a href="/comprar/pagamento/{{item}}"><input type="button" value="Comprar"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </form>
+</body>
+</html>

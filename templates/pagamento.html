@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pagamento.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h3>Pagamento via Pix</h3>
+        <img src="{{ url_for('static', filename=qrcode) }}" alt="QR Code">
+        <h3>Ao realizar o pagamento, clique no botão abaixo</h3>
+        <a href="/comprar/validarpagamento/{{id}}"><button type="button">Validar pagamento</button></a>
+    </div>
+</body>
+</html>

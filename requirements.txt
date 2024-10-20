@@ -1,0 +1,5 @@
+Flask==2.3.3
+requests==2.31.0
+qrcode==7.3
+Pillow==10.0.0  # Necessário para gerar imagens do QR Code
+mercadopago==2.0.0
