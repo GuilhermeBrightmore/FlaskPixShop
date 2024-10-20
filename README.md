@@ -47,7 +47,7 @@ Este projeto é uma aplicação web em Python usando Flask que permite a criaç�
 3. Defina as variáveis `token_mp` e `email_payer` no arquivo `config.py` para a integração com o Mercado Pago.
 4. Execute o servidor com o comando:
    ```bash
-   python app.py
+   python main.py
    ```
 5. Acesse `http://127.0.0.1:5000` no seu navegador para usar a aplicação.
 
