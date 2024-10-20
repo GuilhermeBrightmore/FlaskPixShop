@@ -153,7 +153,7 @@ def pagamento(id):
 @app.route('/comprar/validarpagamento/<id>')
 def validarpagamento(id):
     header = {
-        'Authorization': 'Bearer APP_USR-5915784057422174-101922-b66c2aa3d902d3760abac32ffd196239-1347552601'
+        'Authorization': f'Bearer {token_mp}'
     }
     response = requests.get(url=f"https://api.mercadopago.com/v1/payments/{id}", headers=header)
 
